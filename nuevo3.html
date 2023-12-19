@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaração de Amor</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #82e6ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .heart {
+            width: 100px;
+            height: 90px;
+            background-color: #aa97ff;
+            position: relative;
+            transform: rotate(-45deg);
+            animation: pulse 1s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            width: 100px;
+            height: 90px;
+            background-color: #aa97ff;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before {
+            top: -45px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: 45px;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.3);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .proposal {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #000000;
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+    <div class="proposal">Aceita passar o resto da vida ao meu lado comendo brigadeiro de colher, jantando strogonoff, assistindo Alan e LOL e rindo das minhas piadas que só você entende? </div>
+</body>
+</html>

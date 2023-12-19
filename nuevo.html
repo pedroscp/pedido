@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta aberta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-u7osFlaFjsz7r2p1I3I2jPq6a8g6EGYIM9PY89xEoLZI5UqORi5A+W4ewZcZO7d2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            transition: background-color 0.5s ease;
+        }
+
+        header {
+            background-color: #aa97ff;
+            padding: 20px;
+            color: #fff;
+            font-size: 3em;
+            border-radius: 15px 15px 0 0;
+            position: relative;
+            transition: background-color 0.5s ease;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 20px 20px 0;
+            border-style: solid;
+            border-color: #aa97ff transparent;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px;
+        }
+
+        section {
+            margin-top: 20px;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+
+        .heart {
+            color: #aa97ff;
+            font-size: 2em;
+            margin: 0 5px;
+            animation: beat 1.5s infinite;
+        }
+
+        button {
+            background-color: #aa97ff;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: #aa97ff;
+        }
+
+        @keyframes beat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>E esse é mais um, pra ela, pra você, de nós, Daniela. </h1>
+    </header>
+
+    <section>
+        <p> <i class="heart fas fa-heart"></i></p>
+        <button onclick="responder()">Ei, vem aqui comigo</button>
+    </section>
+
+    <script>
+        function responder() {
+            alert('Senti saudades suas! Não solta minha mão nunca mais, ok?!');
+            window.location.href = "nuevo2.html";
+        }
+    </script>
+</body>
+</html>
